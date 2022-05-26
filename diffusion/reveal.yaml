@@ -25,7 +25,6 @@ style: |
   doc: |
     * Prerequisites 
     * Methods 
-    * Results 
 - title: "Prerequisites"
   class: "title-body"
   img:
@@ -43,3 +42,6 @@ style: |
   doc: |
     * Can be done easily
     * Gives accurate results
+- doc: |
+    All illustrations were taken from the article
+    https://aapt.scitation.org/doi/10.1119/5.0062178
