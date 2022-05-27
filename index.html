@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>An engaging quantitative demonstration of diffusion</title>
+  <meta name="description" content="First Presentation">
+  <meta name="author" content="Vladislav">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" href="help/icon.png">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="plugin/highlight/zenburn.css" id="highlight-theme">
+  <style>
+    .chapter-header {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      font-size: 18pt;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      display: inline-block;
+    }
+
+    .footer>* {
+      opacity: 0.7;
+    }
+
+    .footer * {
+      vertical-align: middle;
+    }
+
+    .footer span {
+      font-size: 15pt;
+    }
+
+    .reveal figure {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      margin: 20px;
+    }
+
+    .reveal figcaption {
+      text-align: center;
+    }
+
+    .h-stack {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .h-stack-border {
+      border-left: 2px solid;
+    }
+
+    .v-stack>* {
+      display: block;
+    }
+
+    .v-stack-border {
+      border-top: 2px solid;
+    }
+
+    .img-pop {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .img-pop:hover {
+      opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    #modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    #img-demo {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 100%;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 100%;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    /* Animation */
+    #img-demo,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* The Close Button */
+    #close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #close:hover,
+    #close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px) {
+      #img-demo {
+        width: 100%;
+      }
+    }
+
+    section.title-body {
+  height: 100%;
+  padding: 10px;
+  display: grid !important;
+  grid-template-rows: 20% 80%;
+  align-items: center;
+  justify-items: center;
+}
+.reveal h1 {
+    font-size: 1.9em;
+}
+
+  </style>
+</head>
+
+<body>
+  <div style="display: none">
+    <div class="top-object">
+      
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+<section>
+<style>
+  section.titlepage {
+    height: 700px;
+    padding: 10px;
+    display: grid !important;
+    grid-template-rows: 50% 40% 10%;
+    align-items: center;
+  }
+</style>
+<section class="titlepage">
+  <h2>An engaging quantitative demonstration of diffusion</h2>
+  <div>
+    <p align="right">Illarionov Vladislav</p>
+    <p align="right">group 855</p>
+  </div>
+  <p style="font-size: 25px">MIPT 2022</p>
+</section>
+</section></section>
+<section>
+<section class="title-body">
+<h1>Plan</h1>
+<ul>
+<li>Prerequisites </li>
+<li>Methods</li>
+</ul>
+</section></section>
+<section>
+<section class="title-body">
+<h1>Prerequisites</h1>
+<div class="h-stack">
+<img alt="" src="images/scheme1.png"/>
+</div>
+</section></section>
+<section>
+<section class="title-body">
+<h1>Methods</h1>
+<div class="h-stack">
+<img alt="" src="images/methods.png"/>
+</div>
+</section></section>
+<section>
+<section class="title-body">
+<h1>Results</h1>
+<div class="h-stack">
+<img alt="" src="images/results.png"/>
+</div>
+</section></section>
+<section>
+<section class="title-body">
+<h1>Summary</h1>
+<ul>
+<li>Can be done easily</li>
+<li>Gives accurate results</li>
+</ul>
+</section></section>
+<section>
+<section>
+<p>All illustrations were taken from the article
+https://aapt.scitation.org/doi/10.1119/5.0062178</p>
+</section></section>
+
+    </div>
+  </div>
+  <div id="modal">
+    <span id="close">&times;</span>
+    <img src="" alt="demo image" id="img-demo">
+    <div id="caption"></div>
+  </div>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/search/search.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script src="plugin/zoom/zoom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  
+  <script>
+    function show_modal(a) {
+      $("#modal").css("display", "block");
+      $("#img-demo").attr("src", a.src);
+      $("#caption").html(a.alt);
+      Reveal.configure({keyboard: {27: close_modal}});
+    }
+
+    function close_modal() {
+      $("#modal").css("display", "none");
+      Reveal.configure({keyboard: {27: "toggleOverview"}});
+    }
+
+    Reveal.initialize({
+        hash: true,
+      plugins: [RevealNotes, RevealSearch, RevealHighlight, RevealMath.MathJax2, RevealZoom, ],
+      mathjax2: {
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js',
+        config: 'TeX-AMS_HTML-full',
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)', '\\[', '\\]']],
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      }
+    }).then(() => {
+      // Pinned objects
+      if (window.location.search.match(/print-pdf/gi)) {
+        let target = $('div.slide-background');
+        target.append($('.top-object'));
+        $('div.pdf-page').each((_, e) => $(e).append($(e).children('.chapter-header').remove()));
+      } else {
+        let target = $('div.reveal');
+        target.append($('.top-object'));
+        target.append($(Reveal.getCurrentSlide()).children('.chapter-header').remove());
+        Reveal.on('slidechanged', e => {
+          $(e.previousSlide).append(target.children('.chapter-header').remove());
+          target.append($(e.currentSlide).children('.chapter-header').remove());
+        });
+      }
+      // Open external links in new windows or tabs
+      $('a').filter('[href^="http"], [href^="//"]')
+        .not('[href*="' + window.location.host + '"]')
+        .attr('rel', "noopener noreferrer")
+        .attr('target', '_blank');
+      // Close button
+      $("#close").click(close_modal);
+      
+    });
+  </script>
+</body>
+
+</html>
